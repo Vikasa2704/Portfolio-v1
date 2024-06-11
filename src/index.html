@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <!-- Інші метадані -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">Portfolio</div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+            <li class="nav-item">
+              <a href="#about-me" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section">
+        <div class="container">
+          <h1>Hello. I’m Fullstack developer</h1>
+          <a href="#work-together" class="btn">Order the project</a>
+          <ul class="social-links">
+            <li>
+              <a href="https://www.instagram.com/goitclub/" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://www.facebook.com/goITclub/" target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/goit" target="_blank">GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="about-me" class="about-me section">
+        <div class="container">
+          <h2>About me</h2>
+          <div class="about-me-content">
+            <img
+              src="images/about-me.jpg"
+              srcset="images/about-me@2x.jpg 2x"
+              alt="About me"
+            />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              non urna vitae lorem gravida convallis. Sed vehicula velit ut
+              tellus fringilla, id egestas nisl vehicula. Curabitur vehicula
+              sapien libero, ac bibendum odio luctus a.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech-skills" class="tech-skills section">
+        <div class="container">
+          <h2 class="visually-hidden">Tech Skills</h2>
+          <div class="skills-marquee">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Node.js</span>
+            <!-- Add more skills as needed -->
+          </div>
+        </div>
+      </section>
+
+      <section id="my-projects" class="my-projects section">
+        <div class="container">
+          <h2>My projects</h2>
+          <ul class="project-list">
+            <!-- Project items will be inserted here -->
+          </ul>
+          <button class="btn load-more">Load more</button>
+        </div>
+      </section>
+
+      <section id="benefits" class="benefits section">
+        <div class="container">
+          <h2>Benefits of working with me</h2>
+          <ul class="benefits-list">
+            <li>High quality code</li>
+            <li>Responsive design</li>
+            <li>Attention to details</li>
+            <li>Client satisfaction</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="faq" class="faq section">
+        <div class="container">
+          <h2>Frequently asked questions</h2>
+          <ul class="faq-list">
+            <li>
+              <button class="faq-question">
+                What is your development process?
+              </button>
+              <div class="faq-answer">
+                My development process includes planning, designing, coding,
+                testing, and deployment.
+              </div>
+            </li>
+            <li>
+              <button class="faq-question">
+                How long does it take to complete a project?
+              </button>
+              <div class="faq-answer">
+                The time to complete a project depends on its complexity and
+                requirements.
+              </div>
+            </li>
+            <li>
+              <button class="faq-question">
+                What technologies do you use?
+              </button>
+              <div class="faq-answer">
+                I use HTML, CSS, JavaScript, React, Node.js, and other modern
+                technologies.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="reviews" class="reviews section">
+        <div class="container">
+          <h2>Reviews</h2>
+          <div class="reviews-slider swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Reviews will be inserted here dynamically -->
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work-together" class="work-together section">
+        <div class="container">
+          <h2>Let’s work together</h2>
+          <form id="contact-form" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer section">
+      <div class="container">
+        <p>© Copyright 2024. Made by LloydJefferson</p>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.instagram.com/goitclub/" target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a href="https://www.facebook.com/goITclub/" target="_blank"
+              >Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li><a href="https://github.com/goit" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2>Thank you for your interest in cooperation!</h2>
+        <p>
+          Your message has been successfully sent. We will contact you soon.
+        </p>
+      </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
