@@ -1,3 +1,6 @@
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
+import './css/styles.css';
 document.addEventListener('DOMContentLoaded', function () {
   const burgerMenu = document.querySelector('.burger-menu');
   const nav = document.querySelector('.nav');

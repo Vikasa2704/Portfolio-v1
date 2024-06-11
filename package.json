@@ -15,6 +15,7 @@
   "author": "Victoria Saltanovich <Vikasa2704@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "accordion-js": "^3.3.4",
     "axios": "^1.7.0",
     "izitoast": "^1.4.0",
     "simplelightbox": "^2.14.3",
