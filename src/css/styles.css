@@ -1,445 +1,294 @@
-/* style.css */
-
-/* Загальні стилі */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: aquamarine;
+/* Контейнер FAQ */
+.faq-container {
+  width: 100%; /* Ширина контейнера 100% */
+  max-width: 360px; /* Максимальна ширина контейнера */
+  min-width: 320px; /* Мінімальна ширина контейнера */
+  margin-left: auto; /* Вирівнювання контейнера по лівому краю */
+  margin-right: auto; /* Вирівнювання контейнера по правому краю */
 }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Секції */
+/* Секція */
 .section {
-  padding: 50px 0;
+  padding-bottom: 80px; /* Відступ унизу секції */
 }
 
-/* Хедер */
-.header {
-  background: #333;
-  color: #fff;
-  padding: 15px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Фон зображення FAQ */
+.faq-image-bg {
+  display: none; /* Приховання фонового зображення FAQ */
 }
 
-.header .logo {
-  font-size: 24px;
-  font-weight: bold;
+/* Контейнер заголовка */
+.header-container-faq {
+  display: flex; /* Відображення в контейнері блоків у ряд */
+  flex-direction: column; /* Встановлення напряму рядка на стовпчик */
+  justify-content: space-between; /* Вирівнювання по вертикалі */
+  margin-bottom: 40px; /* Відступ унизу контейнера */
 }
 
-.nav {
-  display: flex;
+/* Контейнер списку питань та відповідей */
+.faq-list-container {
+  margin-top: auto; /* Вирівнювання по верхньому краю */
+  margin-left: auto; /* Вирівнювання по лівому краю */
 }
 
-.nav-list {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+/* Заголовок FAQ */
+.title-faq {
+  font-family: 'Impact', sans-serif; /* Шрифт заголовка */
+  font-weight: 400; /* Нормальна товщина шрифта */
+
+  margin-bottom: 0; /* Відступ унизу заголовка */
+
+  font-size: 52px; /* Розмір шрифту */
+  line-height: 123%; /* Висота рядка */
+  letter-spacing: 0.03em; /* Міжсимвольний інтервал */
+
+  text-transform: uppercase; /* Перетворення тексту на великі літери */
+  color: #292929; /* Колір тексту */
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); /* Тінь тексту */
 }
 
-.nav-item {
-  margin-left: 15px;
+/* Заголовок FAQ (частина, яка містить кольорову частину) */
+.title-faq-span {
+  color: #00b068; /* Колір тексту */
 }
 
-.nav-link {
-  color: #fff;
-  text-decoration: none;
+/* Елемент списку питань та відповідей */
+.faq-item {
+  position: relative; /* Позиціонування відносно власного контейнера */
+  padding: 28px 24px; /* Відступи зверху і знизу 28px, зліва і справа 24px */
+
+  max-width: 320px; /* Максимальна ширина елемента */
+  border-bottom: 1px solid #ccc; /* Горизонтальна лінія-розділювач між елементами */
 }
 
-.burger-menu {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
+/* Останній елемент списку питань та відповідей */
+.faq-item:last-child {
+  margin-bottom: 0; /* Відступ унизу останнього елемента */
 }
 
-.burger-menu span {
-  width: 25px;
-  height: 3px;
-  background: #fff;
-  margin: 4px 0;
+/* Заголовок елемента списку */
+.title-item-list-header {
+  font-weight: 400; /* Нормальна товщина шрифта */
+
+  width: 224px; /* Ширина заголовка */
+  font-size: 18px; /* Розмір шрифту */
+  line-height: 156%; /* Висота рядка */
+
+  letter-spacing: 0.03em; /* Міжсимвольний інтервал */
+  text-transform: uppercase; /* Перетворення тексту на великі літери */
+  margin-bottom: 0; /* Відступ унизу заголовка */
 }
 
-/* Головна секція */
-.hero {
-  text-align: center;
-  padding: 100px 0;
-  background: url('path/to/hero-background.png') no-repeat center center/cover;
+/* Текст елемента списку */
+.text-item-list {
+  font-family: 'Poppins', sans-serif; /* Шрифт
+
+ тексту */
+  font-weight: 300; /* Тонкий шрифт */
+  text-align: left; /* Вирівнювання тексту по лівому краю */
+  font-size: 16px; /* Розмір шрифту */
+  line-height: 150%; /* Висота рядка */
+  letter-spacing: 0.03em; /* Міжсимвольний інтервал */
+  color: #292929; /* Колір тексту */
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); /* Тінь тексту */
 }
 
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+/* Контейнер для іконки і кнопки розгортання відповіді */
+.questions {
+  display: flex; /* Відображення в контейнері блоків у ряд */
+  justify-content: space-between; /* Вирівнювання по горизонталі з рівномірним розподілом простору */
+  align-items: flex-start; /* Вирівнювання по вертикалі з початком */
 }
 
-.hero .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #ff5733;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
+/* Контейнер для заголовка питання */
+.item-header-container {
+  width: 272px; /* Ширина контейнера */
 }
 
-.social-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+/* Іконка розгортання відповіді */
+.icon-answear {
+  width: 20px; /* Ширина іконки */
+  height: 20px; /* Висота іконки */
+  rotate: 180deg; /* Поворот іконки на 180 градусів */
 }
 
-.social-links li {
-  margin: 0 10px;
+/* Кнопка розгортання відповіді */
+.btn-answear {
+  background: none; /* Фон кнопки прозорий */
+  border: none; /* Без рамки */
+  padding: 0; /* Внутрішні відступи */
+  cursor: pointer; /* Курсор - покажчик */
+  display: flex; /* Відображення блоків у ряд */
+  justify-content: center; /* Вирівнювання по горизонталі по центру */
+  align-items: center; /* Вирівнювання по вертикалі по центру */
+  cursor: pointer; /* Курсор - покажчик */
+  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* Плавне перехідналагоджуваний перехід властивості border */
+  width: 32px; /* Ширина кнопки */
+  height: 32px; /* Висота кнопки */
+  margin-left: 16px; /* Зовнішні відступи зліва */
 }
 
-.social-links a {
-  color: #fff;
-  text-decoration: none;
+/* Іконка розгортання відповіді (частина, яка змінюється) */
+.icon-answear {
+  display: block; /* Відображення іконки як блоку */
+  transition: stroke 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* Плавний перехід властивостей stroke та transform */
+  background-repeat: no-repeat; /* Відображення фону один раз */
+  height: 24px; /* Висота іконки */
+  width: 24px; /* Ширина іконки */
 }
 
-/* Адаптивні стилі */
-@media (max-width: 1280px) {
-  .container {
-    max-width: 100%;
+/* Активний елемент списку питань та відповідей */
+.is-active.faq-item {
+  background: rgba(0, 176, 104, 0.2); /* Фон активного елемента */
+  border: transparent; /* Без рамки */
+  border-radius: 16px; /* Радіус закруглення кутів */
+}
+
+/* Активний стан */
+.is-active {
+  border-top: 5px solid #fff; /* Верхня рамка */
+}
+
+/* Панель відповіді в активному стані */
+.is-active .ac-panel {
+  margin-top: 24px; /* Відступ від верху */
+}
+
+/* Іконка "відкрита" */
+.ac.icon-open {
+  transform: rotate(180deg); /* Поворот іконки на 180 градусів */
+}
+
+/* Іконка відповіді в активному стані */
+.is-active .icon-answear {
+  transform: rotate(180deg); /* Поворот іконки на 180 градусів */
+}
+
+/* Панель відпов
+
+іді */
+.ac-panel {
+  transition-timing-function: cubic-bezier(
+    0.4,
+    0,
+    0.2,
+    1
+  ); /* Функція переходу */
+}
+
+/* Активна панель з питанням та відповіддю */
+.ac .ac-panel {
+  overflow: hidden; /* Перехід внутрішніх відступів */
+  transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Плавний перехід висоти та видимості панелі */
+}
+
+/* Візуальне виділення активного елемента списку */
+.faq-item.is-active::before {
+  content: ''; /* Зміст відсутній */
+  position: absolute; /* Абсолютне позиціонування */
+  top: -5px; /* Відступ від верхнього краю */
+  left: 0; /* Вирівнювання по лівому краю */
+  width: 100%; /* Ширина елемента */
+  height: 7px; /* Висота елемента */
+  background-color: #f0f0f0; /* Колір фону */
+  z-index: 1; /* Індекс накладення */
+}
+
+/* При наведенні курсора на кнопку розгортання */
+.btn-answear:hover {
+  background-color: transparent; /* Прозорий фон */
+}
+
+/* Медіа-запит для екранів ширше 768px */
+@media screen and (min-width: 768px) {
+  .section {
+    padding-bottom: 124px; /* Збільшення відступу унизу секції */
+  }
+
+  .faq-container {
+    max-width: 704px; /* Збільшення максимальної ширини контейнера */
+    margin: 0 auto; /* Центрування контейнера по горизонталі */
+    padding: 0; /* Відсутність внутрішніх відступів */
+  }
+
+  .faq-item {
+    max-width: 704px; /* Збільшення максимальної ширини елемента */
+  }
+
+  .title-faq {
+    font-size: 108px; /* Збільшення розміру шрифту */
+    line-height: 115%; /* Збільшення висоти рядка */
+    letter-spacing: 0.02em; /* Збільшення міжсимвольного інтервалу */
+  }
+
+  .item-header-container {
+    width: 656px; /* Збільшення ширини контейнера заголовка */
+  }
+
+  .title-item-list-header {
+    width: 600px; /* Збільшення ширини заголовка */
+    font-size: 20px; /* Збільшення розміру шрифту */
+    line-height: 160%; /* Збільшення висоти рядка */
+  }
+
+  .header-container-faq {
+    margin-bottom: 60px; /* Збільшення відступу унизу контейнера */
   }
 }
 
-@media (max-width: 768px) {
-  .nav {
-    display: none;
-    flex-direction: column;
+/* Медіа-запит для екранів ширше 1280px */
+@media screen and (min-width: 1280px) {
+  .section {
+    padding-bottom: 164px; /* Збільшення відступу унизу секції */
   }
-
-  .nav-active {
-    display: flex;
+  .faq-container {
+    display: flex; /* Відображення контейнера як рядка блоків */
+    padding-left: 32px; /* Лівий внутрішній відступ */
+    padding-right: 32px; /* Правий внутрішній відступ */
+    max-width: 1280px; /* Максимальна ширина контейнера */
   }
-
-  .burger-menu {
-    display: flex;
+  .faq-item {
+    max-width: 592px; /* Збільшення максимальної ширини елемента */
   }
-}
+  .faq-image-bg {
+    margin-top: 240px; /* Збільшення відступу зверху */
+    display: block; /* Відображення блоку */
+    width: 526px; /* Ширина */
+    height: 408px; /* Висота */
 
-@media (max-width: 360px) {
-  .hero h1 {
-    font-size: 28px;
+    background-image: linear-gradient(
+        to right,
+        rgba(240, 240, 240, 0.4),
+        rgba(240, 240, 240, 0.4)
+      ),
+      url('../img/faq-bg.png'); /* Фонове зображення */
+    background-size: cover; /* Розмір фонового зображення */
+    background-repeat: no-repeat; /* Повторення фонового зображення */
   }
-
-  .hero .btn {
-    padding: 8px 16px;
+  .header-container-faq {
+    margin-bottom: 0; /* Відсутність відступу унизу контейнера */
+    margin-right: 98px; /* Правий зовнішній відступ */
   }
-}
-/* Hero Section */
-/* Об'єднання загальних стилів */
-.hero {
-  text-align: center;
-  padding: 100px 0;
-  background: url('images/hero-background.png') no-repeat center center/cover;
-  color: #fff;
-}
-
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.hero .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #ff5733;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.hero .social-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.hero .social-links li {
-  margin: 0 10px;
-}
-
-.hero .social-links a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* About Me Section */
-.about-me {
-  text-align: center;
-  padding: 50px 0;
-  background: url('images/about-me-background.png') no-repeat center
-    center/cover;
-}
-
-.about-me h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.about-me .about-me-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.about-me img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.about-me p {
-  max-width: 600px;
-  font-size: 18px;
-  color: #333;
-}
-
-/* Tech Skills Section */
-.tech-skills {
-  text-align: center;
-  padding: 50px 0;
-}
-
-.skills-marquee {
-  display: flex;
-  gap: 20px;
-  animation: marquee 10s linear infinite;
-}
-
-.skills-marquee span {
-  font-size: 18px;
-  background: #f0f0f0;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
+  .item-header-container {
+    width: 544px; /* Ширина контейнера заголовка */
   }
-  100% {
-    transform: translateX(-100%);
+  .title-item-list-header {
+    width: 488px; /* Ширина заголовка */
   }
 }
 
-/* My Projects Section */
-.my-projects {
-  text-align: center;
-  padding: 50px 0;
-}
-
-.my-projects h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.project-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 0;
-}
-
-.project-list li {
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  max-width: 300px;
-}
-
-.project-list img {
-  max-width: 100%;
-  height: auto;
-}
-
-.project-list .project-info {
-  padding: 15px;
-}
-
-.load-more {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #ff5733;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-/* Benefits Section */
-.benefits {
-  text-align: center;
-  padding: 50px 0;
-}
-
-.benefits h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.benefits-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 0;
-}
-
-.benefits-list li {
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 300px;
-}
-
-/* FAQ Section */
-.faq {
-  text-align: center;
-  padding: 50px 0;
-}
-
-.faq h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.faq-list {
-  list-style: none;
-  padding: 0;
-}
-
-.faq-question {
-  background: #fff;
-  border: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 15px;
-  text-align: left;
-  width: 100%;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.faq-answer {
-  display: none;
-  padding: 15px;
-  border-top: 1px solid #ddd;
-  font-size: 16px;
-}
-
-/* Reviews Section */
-.reviews {
-  text-align: center;
-  padding: 50px 0;
-}
-
-.reviews h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.swiper-container {
-  width: 100%;
-  padding: 20px;
-}
-
-.swiper-wrapper {
-  display: flex;
-}
-
-.swiper-slide {
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.swiper-pagination {
-  margin-top: 20px;
-}
-
-/* Work Together Section */
-.work-together {
-  text-align: center;
-  padding: 50px 0;
-}
-
-.work-together h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.contact-form button {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #ff5733;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Footer Section */
-.footer {
-  text-align: center;
-  padding: 20px 0;
-  background: #333;
-  color: #fff;
-}
-
-.footer p {
-  margin: 0;
-  font-size: 14px;
-}
-
-.footer .social-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 10px 0 0 0;
-  padding: 0;
-}
-
-.footer .social-links li {
-  margin: 0 10px;
-}
-
-.footer .social-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
+/* Медіа-запит для екранів з високим розширенням пікселів */
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(240, 240, 240, 0.4),
+        rgba(240, 240, 240, 0.4)
+      ),
+      url('../img/faq-bg2.png'); /* Фонове зображення */
+  }
 }

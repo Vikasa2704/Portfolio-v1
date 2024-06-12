@@ -5,237 +5,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
 
-    <!-- Інші метадані -->
+    <!-- Підключення CSS для Accordions -->
     <link
       rel="stylesheet"
-      href="https://docs.google.com/spreadsheets/d/1gZC4OK4aKBAQUPEKCySlDVX2_gRaUpRhE6R3-SKHizI/edit#gid=0&range=C7"
+      href="https://cdnjs.cloudflare.com/ajax/libs/accordion/3.1.1/accordion.min.css"
     />
-    <link rel="stylesheet" href="[CDN CSS URL]" />
-    <script src="[CDN JS URL]"></script>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <div class="logo">Portfolio</div>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
-            <li class="nav-item">
-              <a href="#about-me" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#skills" class="nav-link">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a href="#projects" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="burger-menu">
-          <span></span>
-          <span></span>
-          <span></span>
+    <!-- Секція з ідентифікатором FAQ і класами section та faq -->
+    <section id="FAQ" class="section faq">
+      <!-- Контейнер для FAQ -->
+      <div class="faq-container">
+        <!-- Контейнер для заголовка FAQ -->
+        <div class="header-container-faq">
+          <!-- Заголовок FAQ з розбиттям тексту на кілька рядків -->
+          <h2 class="title-faq">
+            frequently <br />
+            asked <br />
+            <span class="title-faq-span">question</span>
+          </h2>
+          <!-- Фонове зображення для FAQ -->
+          <div class="faq-image-bg"></div>
         </div>
-      </div>
-    </header>
 
-    <main>
-      <section class="hero section">
-        <div class="container">
-          <h1>Hello. I’m Fullstack developer</h1>
-          <a href="#work-together" class="btn">Order the project</a>
-          <ul class="social-links">
-            <li>
-              <a href="https://www.instagram.com/goitclub/" target="_blank"
-                >Instagram</a
-              >
-            </li>
-            <li>
-              <a href="https://www.facebook.com/goITclub/" target="_blank"
-                >Facebook</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/school/goit-start-your-career-in-it"
-                target="_blank"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/goit" target="_blank">GitHub</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="about-me" class="about-me section">
-        <div class="container">
-          <h2>About me</h2>
-          <div class="about-me-content">
-            <img
-              src="images/about-me.jpg"
-              srcset="images/about-me@2x.jpg 2x"
-              alt="About me"
-            />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              non urna vitae lorem gravida convallis. Sed vehicula velit ut
-              tellus fringilla, id egestas nisl vehicula. Curabitur vehicula
-              sapien libero, ac bibendum odio luctus a.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="tech-skills" class="tech-skills section">
-        <div class="container">
-          <h2 class="visually-hidden">Tech Skills</h2>
-          <div class="skills-marquee">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>React</span>
-            <span>Node.js</span>
-            <!-- Add more skills as needed -->
-          </div>
-        </div>
-      </section>
-
-      <section id="my-projects" class="my-projects section">
-        <div class="container">
-          <h2>My projects</h2>
-          <ul class="project-list">
-            <!-- Project items will be inserted here -->
-          </ul>
-          <button class="btn load-more">Load more</button>
-        </div>
-      </section>
-
-      <section id="benefits" class="benefits section">
-        <div class="container">
-          <h2>Benefits of working with me</h2>
-          <ul class="benefits-list">
-            <li>High quality code</li>
-            <li>Responsive design</li>
-            <li>Attention to details</li>
-            <li>Client satisfaction</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="faq" class="faq section">
-        <div class="container">
-          <h2>Frequently asked questions</h2>
-          <ul class="faq-list">
-            <li>
-              <button class="faq-question">
-                What is your development process?
-              </button>
-              <div class="faq-answer">
-                My development process includes planning, designing, coding,
-                testing, and deployment.
+        <!-- Контейнер для списку FAQ -->
+        <div class="faq-list-container">
+          <!-- Список FAQ з використанням класів для аккордеону -->
+          <ul class="faq-list accordion-container">
+            <!-- Перший елемент FAQ, який за замовчуванням активний -->
+            <li class="faq-item ac is-active js-enabled">
+              <div class="questions">
+                <div class="item-header-container">
+                  <!-- Заголовок першого елементу FAQ -->
+                  <h3 class="title-item-list-header ac-header">
+                    What programming languages ​​are most often used in your
+                    project
+                  </h3>
+                </div>
+                <!-- Кнопка для розгортання/згортання відповіді -->
+                <button type="button" class="btn-answear ac-trigger">
+                  <svg class="icon-answear">
+                    <use href="/img/icon.svg#icon-dropdown-up"></use>
+                  </svg>
+                </button>
+              </div>
+              <!-- Панель з відповіддю для першого елементу -->
+              <div class="ac-panel">
+                <p class="text-item-list ac-text">
+                  In the field of web development, there are various
+                  technologies and programming languages. Typically, this
+                  includes a combination of frontend (client side) and backend
+                  (server side) languages.
+                </p>
               </div>
             </li>
-            <li>
-              <button class="faq-question">
-                How long does it take to complete a project?
-              </button>
-              <div class="faq-answer">
-                The time to complete a project depends on its complexity and
-                requirements.
+
+            <!-- Другий елемент FAQ -->
+            <li class="faq-item ac">
+              <div class="questions">
+                <div class="item-header-container">
+                  <!-- Заголовок другого елементу FAQ -->
+                  <h3 class="title-item-list-header ac-header">
+                    What are the deadlines for the project
+                  </h3>
+                </div>
+                <!-- Кнопка для розгортання/згортання відповіді -->
+                <button type="button" class="btn-answear ac-trigger">
+                  <svg class="icon-answear">
+                    <use href="/img/icon.svg#icon-arrow-up"></use>
+                  </svg>
+                </button>
+              </div>
+              <!-- Панель з відповіддю для другого елементу -->
+              <div class="ac-panel">
+                <p class="text-item-list ac-text">
+                  The terms of project implementation depend to a large extent
+                  on a number of factors, such as the scope of the project, its
+                  complexity, and the availability of resources. Determining
+                  exact deadlines is a difficult task, and it usually occurs
+                  during the planning phase of the project.
+                </p>
               </div>
             </li>
-            <li>
-              <button class="faq-question">
-                What technologies do you use?
-              </button>
-              <div class="faq-answer">
-                I use HTML, CSS, JavaScript, React, Node.js, and other modern
-                technologies.
+
+            <!-- Третій елемент FAQ -->
+            <li class="faq-item ac">
+              <div class="questions">
+                <div class="item-header-container">
+                  <!-- Заголовок третього елементу FAQ -->
+                  <h3 class="title-item-list-header ac-header">
+                    What payment methods do you accept?
+                  </h3>
+                </div>
+                <!-- Кнопка для розгортання/згортання відповіді -->
+                <button type="button" class="btn-answear ac-trigger">
+                  <svg class="icon-answear">
+                    <use href="/img/icon.svg#icon-arrow-up"></use>
+                  </svg>
+                </button>
+              </div>
+              <!-- Панель з відповіддю для третього елементу -->
+              <div class="ac-panel">
+                <p class="text-item-list ac-text">
+                  Payment through credit and debit cards such as Visa,
+                  MasterCard, specialized electronic payment systems such as
+                  PayPal, as well as payments in cryptocurrencies such as
+                  Bitcoin, Ethereum and others.
+                </p>
+              </div>
+            </li>
+
+            <!-- Четвертий елемент FAQ -->
+            <li class="faq-item ac">
+              <div class="questions">
+                <div class="item-header-container">
+                  <!-- Заголовок четвертого елементу FAQ -->
+                  <h3 class="title-item-list-header ac-header">
+                    How can I contact you
+                  </h3>
+                </div>
+                <!-- Кнопка для розгортання/згортання відповіді -->
+                <button type="button" class="btn-answear ac-trigger">
+                  <svg class="icon-answear">
+                    <use href="/img/icon.svg#icon-arrow-up"></use>
+                  </svg>
+                </button>
+              </div>
+              <!-- Панель з відповіддю для четвертого елементу -->
+              <div class="ac-panel">
+                <p class="text-item-list ac-text">
+                  In the field of web development, there are various
+                  technologies and programming languages. Typically, this
+                  includes a combination of frontend (client side) and backend
+                  (server side) languages.
+                </p>
+              </div>
+            </li>
+
+            <!-- П'ятий елемент FAQ -->
+            <li class="faq-item ac">
+              <div class="questions">
+                <div class="item-header-container">
+                  <!-- Заголовок п'ятого елементу FAQ -->
+                  <h3 class="title-item-list-header ac-header">
+                    Do you provide advice or support
+                  </h3>
+                </div>
+                <!-- Кнопка для розгортання/згортання відповіді -->
+                <button type="button" class="btn-answear ac-trigger">
+                  <svg class="icon-answear">
+                    <use href="./img/icon.svg#icon-arrow-up"></use>
+                  </svg>
+                </button>
+              </div>
+              <!-- Панель з відповіддю для п'ятого елементу -->
+              <div class="ac-panel">
+                <p class="text-item-list ac-text">
+                  The terms of project implementation depend to a large extent
+                  on a number of factors, such as the scope of the project, its
+                  complexity, and the availability of resources. Determining
+                  exact deadlines is a difficult task, and it usually occurs
+                  during the planning phase of the project.
+                </p>
+              </div>
+            </li>
+
+            <!-- Шостий елемент FAQ -->
+            <li class="faq-item ac">
+              <div class="questions">
+                <div class="item-header-container">
+                  <!-- Заголовок шостого елементу FAQ -->
+                  <h3 class="title-item-list-header ac-header">
+                    What does the process of developing a software product look
+                    like from idea to implementation
+                  </h3>
+                </div>
+                <!-- Кнопка для розгортання/згортання відповіді -->
+                <button type="button" class="btn-answear ac-trigger">
+                  <svg class="icon-answear">
+                    <use href="./img/icon.svg#icon-arrow-up"></use>
+                  </svg>
+                </button>
+              </div>
+              <!-- Панель з відповіддю для шостого елементу -->
+              <div class="ac-panel">
+                <p class="text-item-list ac-text">
+                  Payment through credit and debit cards such as Visa,
+                  MasterCard, specialized electronic payment systems such as
+                  PayPal, as well as payments in cryptocurrencies such as
+                  Bitcoin, Ethereum and others.
+                </p>
               </div>
             </li>
           </ul>
         </div>
-      </section>
-
-      <section id="reviews" class="reviews section">
-        <div class="container">
-          <h2>Reviews</h2>
-          <div class="reviews-slider swiper-container">
-            <div class="swiper-wrapper">
-              <!-- Reviews will be inserted here dynamically -->
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="work-together" class="work-together section">
-        <div class="container">
-          <h2>Let’s work together</h2>
-          <form id="contact-form" class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              required
-            ></textarea>
-            <button type="submit">Send message</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer section">
-      <div class="container">
-        <p>© Copyright 2024. Made by LloydJefferson</p>
-        <ul class="social-links">
-          <li>
-            <a href="https://www.instagram.com/goitclub/" target="_blank"
-              >Instagram</a
-            >
-          </li>
-          <li>
-            <a href="https://www.facebook.com/goITclub/" target="_blank"
-              >Facebook</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/school/goit-start-your-career-in-it"
-              target="_blank"
-              >LinkedIn</a
-            >
-          </li>
-          <li><a href="https://github.com/goit" target="_blank">GitHub</a></li>
-        </ul>
       </div>
-    </footer>
+    </section>
 
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <h2>Thank you for your interest in cooperation!</h2>
-        <p>
-          Your message has been successfully sent. We will contact you soon.
-        </p>
-      </div>
-    </div>
-
+    <!-- Підключення JS для Accordions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/accordion/3.1.1/accordion.min.js"></script>
+    <!-- Підключення власного JS -->
     <script src="main.js" type="module"></script>
   </body>
 </html>
