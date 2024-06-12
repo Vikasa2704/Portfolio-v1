@@ -31,7 +31,6 @@ new Accordion(faqList, {
     const previousItem = clickedItem.previousElementSibling;
     if (previousItem) {
       // Якщо попередній елемент існує, змінюємо його стиль обрамлення
-      console.log(previousItem);
       previousItem.style.borderBottom = clickedItem.classList.contains(
         'is-active'
       )
@@ -45,7 +44,7 @@ new Accordion(faqList, {
 document.querySelectorAll('.faq-item .btn-answear').forEach(function (btn) {
   btn.addEventListener('click', function () {
     // Знаходимо батьківський елемент для натиснутої кнопки
-    var listItem = btn.closest('.faq-item');
+    const listItem = btn.closest('.faq-item');
     // Переключаємо стан активності для натиснутого елемента
     listItem.classList.toggle('is-active');
   });
